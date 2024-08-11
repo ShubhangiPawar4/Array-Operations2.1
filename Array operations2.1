@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main()
+{
+    int arr[50], pla, i, n, num;
+    
+    printf("Enter number of elements in the array\n");
+    scanf("%d", &n);
+    
+    printf("Enter %d elements\n", n);
+    
+    for (i = 0; i < n; i++)  
+     {
+        scanf("%d", &arr[i]);
+     }
+    
+    printf("Please enter the place at which  you want to insert an new element\n");
+    scanf("%d", &pla);
+    
+    printf("Please enter the new number\n");
+    scanf("%d", &num);
+    
+    for (i = n - 1; i >= pla - 1; i--)    
+     {
+        arr[i+1] = arr[i];
+     }
+    arr[pla-1] = num;
+    
+    printf("New  array is\n");
+    
+    for (i = 0; i <= n; i++)  
+    {
+        printf("%d\n", arr[i]);    
+    }
+    return 0;
+}
